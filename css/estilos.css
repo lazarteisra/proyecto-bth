@@ -1,0 +1,783 @@
+/* =========================================================
+   OTB VILLA ESPERANZA — Estilos del sitio público
+   ---------------------------------------------------------
+   Reemplaza a otb1.css, index1.css, index2.css e index3.css.
+   Mantiene los mismos colores, fuentes, imágenes y distribución
+   del diseño original, pero con una maquetación ordenada
+   (flex/grid) en vez de posiciones fijas en píxeles, para que
+   todo quede centrado y se adapte a laptop, tablet y celular.
+   ========================================================= */
+
+:root {
+    --fondo: rgb(3, 52, 80);
+    --panel: #dbebfd;
+    --tarjeta: #c5dbf5;
+    --tarjeta-borde: #d5e3ef;
+    --titulo: rgb(9, 71, 112);
+    --titulo-hero: rgb(36, 72, 190);
+    --subtitulo-hero: rgb(19, 76, 151);
+    --enlace: #1b3fcf;
+    --azul: #0756c9;
+    --azul2: #1680e8;
+    --verde: rgb(51, 153, 51);
+    --gris: rgb(83, 83, 81);
+    --blanco-borde: #c9dceb;
+    --fuente-titulo: "Arial Black", "Arial Bold", Gadget, Arial, sans-serif;
+    --fuente-mono: "Courier New", Courier, monospace;
+    --fuente-cursiva: "Merienda", cursive;
+    --fuente-texto: "Times New Roman", Times, serif;
+    --ancho-max: 1500px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+    margin: 0;
+    padding: 10px;
+    background-color: var(--fondo);
+    font-family: var(--fuente-texto);
+    color: #111;
+    min-height: 100vh;
+}
+
+img { max-width: 100%; }
+a { text-decoration: none; }
+p, h1, h2, h3, h5, h6 { margin: 0; }
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* Botón con degradado azul (Iniciar sesión, Consultar) */
+.iniciar, .pepe {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--azul), var(--azul2));
+    font: 700 15px Arial, Helvetica, sans-serif;
+    box-shadow: 0 5px 12px rgba(7, 86, 201, 0.25);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.iniciar:hover, .pepe:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(7, 86, 201, 0.35);
+    background: linear-gradient(135deg, #0649ad, #0e70d5);
+}
+.iniciar:active, .pepe:active { transform: scale(0.96); }
+.sesion, .consul { margin: 0; }
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+.arriba {
+    display: grid;
+    grid-template-columns: auto auto auto auto 1fr auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 8px;
+    background-color: var(--panel);
+    border-radius: 10px;
+    padding: 12px 28px;
+    min-height: 80px;
+}
+.arriba > .agua {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+.arriba .otb, .arriba .otb1, .arriba .otb2 {
+    grid-row: 1;
+    display: inline;
+    font-family: var(--fuente-titulo);
+    font-size: 20px;
+    color: var(--titulo);
+    line-height: 1.1;
+}
+/* Las tres palabras del nombre van juntas en la misma línea */
+.arriba .otb  { grid-column: 2; align-self: end; }
+.arriba .otb1 { grid-column: 3; align-self: end; }
+.arriba .otb2 { grid-column: 4; align-self: end; }
+.arriba > .agua { margin-right: 4px; }
+.arriba .sistema {
+    grid-column: 2 / span 4;
+    align-self: start;
+    grid-row: 2;
+    font-family: var(--fuente-mono);
+    font-size: 15px;
+    color: #222;
+    margin-top: 2px;
+}
+.fofo {
+    grid-column: 6;
+    grid-row: 1 / span 2;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.fofo a {
+    font-family: var(--fuente-mono);
+    font-size: 15px;
+    color: var(--enlace);
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+}
+.fofo a:hover { color: var(--azul); border-bottom-color: currentColor; }
+.fofo a.otb-actual { font-weight: 700; border-bottom-color: currentColor; text-decoration: none; }
+.fofo .iniciar {
+    min-width: 140px;
+    height: 46px;
+    padding: 0 22px;
+    margin-left: 20px;
+}
+
+/* =========================================================
+   PORTADA CON LA IMAGEN DEL GRIFO (Inicio, Consulta, Información)
+   ========================================================= */
+.medio {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    min-height: 300px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    background-image: url(../img/grifo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    text-align: center;
+}
+body[data-pagina="inicio"] .medio,
+body[data-pagina="consulta"] .medio {
+    background-image:
+        radial-gradient(ellipse at center, rgba(219, 235, 253, 0.7) 0%, rgba(219, 235, 253, 0.35) 55%, rgba(219, 235, 253, 0) 85%),
+        url(../img/grifo.jpeg);
+}
+.medio h1 {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.85);
+    font-family: var(--fuente-titulo);
+    font-size: 25px;
+    line-height: 1.25;
+    color: var(--titulo-hero);
+}
+.medio .deuda {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.95), 0 0 2px rgba(255, 255, 255, 0.9);
+    font-size: 20px;
+    color: var(--subtitulo-hero);
+}
+
+/* Caja de búsqueda */
+.celula {
+    width: 100%;
+    max-width: 620px;
+    background-color: var(--tarjeta);
+    border-radius: 20px;
+    padding: 18px 22px;
+    text-align: left;
+    box-shadow: 0 8px 24px rgba(3, 52, 80, 0.18);
+}
+.celula > span {
+    display: block;
+    font-family: var(--fuente-cursiva);
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 10px;
+}
+.buscar {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+.buscar .caja {
+    flex: 1;
+    min-width: 0;
+    height: 42px;
+    padding: 0 12px;
+    font-size: 16px;
+    border: 1px solid #8aa6bf;
+    border-radius: 8px;
+    background: #fff;
+}
+.buscar .caja:focus { outline: 3px solid rgba(22, 128, 232, 0.3); border-color: var(--azul2); }
+.buscar .pepe {
+    flex: 0 0 auto;
+    min-width: 130px;
+    height: 42px;
+    padding: 0 22px;
+}
+.cedula1 {
+    font-family: var(--fuente-cursiva);
+    font-size: 14px;
+    color: var(--gris);
+    margin-top: 10px;
+}
+
+/* =========================================================
+   ZONA INFERIOR (panel celeste)
+   ========================================================= */
+.abajo {
+    background-color: var(--panel);
+    border-radius: 10px;
+    padding: 28px;
+}
+
+/* Tarjetas blancas de datos (Inicio y Consulta) */
+.datos, .resumen {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 22px 36px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 30px;
+    align-content: start;
+}
+.usuario1, .resumen1 {
+    grid-column: 1 / -1;
+    font-family: var(--fuente-titulo);
+    font-size: 18px;
+    color: var(--titulo);
+    margin: 0 0 14px;
+}
+.codigo, .socio, .codigo1, .socio1 {
+    font-size: 18px;
+    line-height: 1.2;
+}
+.pagar {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 100%;
+    max-width: 420px;
+    height: 44px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--verde);
+    color: #fff;
+    font: 15px Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.15s;
+}
+.pagar:hover { background-color: rgb(40, 130, 40); }
+.pagar:active { transform: scale(0.98); }
+
+/* Tarjetas celestes con ícono (Consulta e Información) */
+.informacion .info, .informacion .gaga, .informacion .tata, .informacion .ayudarte {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background-color: var(--tarjeta);
+    border: 1px solid var(--tarjeta-borde);
+    border-radius: 12px;
+    padding: 20px;
+    font-family: var(--fuente-mono);
+}
+.informacion .agua {
+    flex: 0 0 auto;
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+.informacion .texto { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.ayuda {
+    font-size: 20px;
+    color: #081bc7;
+}
+.dudas {
+    font-size: 14px;
+    line-height: 1.45;
+    color: #080808;
+}
+.boton {
+    display: inline-block;
+    padding: 7px 18px;
+    border: 1px solid #0864c7;
+    border-radius: 6px;
+    color: #0864c7;
+    background-color: #fff;
+    font-size: 13px;
+    transition: 0.2s;
+}
+.boton:hover { background-color: #0864c7; color: #fff; }
+
+/* =========================================================
+   INICIO (otb.html)
+   ========================================================= */
+body[data-pagina="inicio"] .abajo {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px 40px;
+}
+body[data-pagina="inicio"] .abajo > h3 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: var(--fuente-titulo);
+    font-size: 20px;
+    color: var(--titulo);
+}
+.perfil, .perfil1, .perfil2 {
+    justify-self: center;
+    width: 100%;
+    max-width: 340px;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    column-gap: 14px;
+    align-items: center;
+    background-color: var(--tarjeta);
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 14px 18px;
+}
+.perfil { background-color: #cae0fa; }
+.what, .what1, .what2 {
+    grid-row: 1 / span 2;
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+.gato, .gato1, .gato2 {
+    align-self: end;
+    font-family: var(--fuente-titulo);
+    font-size: 18px;
+    color: var(--titulo);
+}
+.revisar, .revisar1, .revisar2 {
+    align-self: start;
+    font-size: 13px;
+    line-height: 1.4;
+    margin-top: 4px;
+}
+.estadistica {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px 40px;
+    align-items: stretch;
+}
+.estadistica h5 {
+    grid-column: 1 / -1;
+    font-family: var(--fuente-cursiva);
+    font-size: 20px;
+    color: var(--titulo);
+    margin-top: 6px;
+}
+.cobro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cobro1 {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* =========================================================
+   CONSULTA (index1.html)
+   ========================================================= */
+body[data-pagina="consulta"] .abajo {
+    display: grid;
+    grid-template-columns: minmax(260px, 1fr) minmax(0, 2.8fr) minmax(260px, 1fr);
+    grid-template-areas:
+        "ayuda   centro  cuidemos"
+        "seguro  centro  equipo";
+    gap: 22px;
+    align-items: stretch;
+}
+body[data-pagina="consulta"] section.informacion { display: contents; }
+body[data-pagina="consulta"] .papa     { grid-area: centro; }
+body[data-pagina="consulta"] .info     { grid-area: ayuda; }
+body[data-pagina="consulta"] .gaga     { grid-area: seguro; }
+body[data-pagina="consulta"] .tata     { grid-area: cuidemos; }
+body[data-pagina="consulta"] .ayudarte { grid-area: equipo; }
+
+.papa {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+.historial { grid-column: 1 / -1; }
+.tabla {
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+.historial table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 14px;
+}
+.historial th {
+    background: #f1f5f8;
+    color: #1d2f3d;
+    padding: 10px 8px;
+    font-weight: 900;
+}
+.historial td {
+    padding: 10px 8px;
+    border-top: 1px solid #e1e7eb;
+    color: #344854;
+}
+.estado {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: #dff5e3;
+    color: #24963d;
+    border: 1px solid #8bd49a;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+/* =========================================================
+   INFORMACIÓN (index2.html)
+   ========================================================= */
+body[data-pagina="informacion"] .medio h1 {
+    font-size: 50px;
+    color: #fcfcfc;
+    text-shadow: 0 2px 10px rgba(3, 52, 80, 0.55);
+}
+.villa {
+    font-family: var(--fuente-titulo);
+    font-size: 30px;
+    color: rgb(64, 54, 209);
+    text-shadow: 0 1px 8px rgba(255, 255, 255, 0.7);
+}
+.aqui {
+    max-width: 640px;
+    font-family: var(--fuente-titulo);
+    font-size: 17px;
+    line-height: 1.45;
+    color: rgb(66, 38, 194);
+    background: rgba(219, 235, 253, 0.8);
+    padding: 10px 18px;
+    border-radius: 10px;
+}
+body[data-pagina="informacion"] .abajo {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+    align-items: stretch;
+}
+body[data-pagina="informacion"] section.informacion {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 26px;
+}
+body[data-pagina="informacion"] .dudas { font-size: 15px; }
+body[data-pagina="informacion"] .dudas br { display: none; }
+
+.tarifas, .horarios, .formas {
+    background: #fff;
+    border: 1px solid var(--blanco-borde);
+    border-radius: 10px;
+    padding: 18px 22px;
+    font-family: var(--fuente-mono);
+}
+.vigente, .horario, .forma {
+    color: #0864c7;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+.tarifas table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    text-align: center;
+}
+.tarifas th {
+    background: #e5f0fc;
+    color: #064ca0;
+    padding: 8px 6px;
+}
+.tarifas td {
+    padding: 10px 6px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Horarios: día a la izquierda, hora a la derecha */
+.horarios {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 16px;
+    align-items: center;
+}
+.horarios .horario { grid-column: 1 / -1; grid-row: 1; }
+.horarios hr { grid-column: 1 / -1; width: 100%; margin: 8px 0; border: none; border-top: 1px solid #b8c6d2; }
+.horarios hr:nth-of-type(1) { grid-row: 2; }
+.horarios .lunes     { grid-row: 3; grid-column: 1; }
+.horarios .martes    { grid-row: 3; grid-column: 2; }
+.horarios hr:nth-of-type(2) { grid-row: 4; }
+.horarios .sabado    { grid-row: 5; grid-column: 1; }
+.horarios .miercoles { grid-row: 5; grid-column: 2; }
+.horarios hr:nth-of-type(3) { grid-row: 6; }
+.horarios .domingo   { grid-row: 7; grid-column: 1; }
+.horarios .jueves    { grid-row: 7; grid-column: 2; }
+.lunes, .martes, .miercoles, .jueves, .sabado, .domingo { font-size: 20px; line-height: 1.3; }
+.martes, .miercoles, .jueves { text-align: right; }
+.jueves { color: red; }
+
+.formas { display: flex; flex-direction: column; }
+.pago, .deposito, .punto, .linea { font-size: 19px; padding: 9px 0; }
+
+/* =========================================================
+   CONTACTO (index3.html)
+   ========================================================= */
+body[data-pagina="contacto"] .medio {
+    background: var(--panel);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 560px));
+    justify-content: center;
+    align-items: stretch;
+    gap: 14px 60px;
+    padding: 30px 28px 40px;
+    min-height: 0;
+}
+.contactos, .estamos, .cualquier { grid-column: 1 / -1; text-align: center; }
+.medio .contactos {
+    font-family: var(--fuente-titulo);
+    font-size: 40px;
+    color: #000;
+}
+.estamos, .cualquier { font-size: 20px; line-height: 1.5; }
+.cualquier { margin: -10px 0 18px; }
+
+.envianos, body[data-pagina="contacto"] .info {
+    background: #fff;
+    border: 1px solid var(--blanco-borde);
+    border-radius: 10px;
+    padding: 22px 26px;
+    text-align: left;
+}
+.envianos { display: flex; flex-direction: column; }
+.mensaje, .infos {
+    color: #0864c7;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+.nombre, .correo, .envianos label, .mensaje1 {
+    font-size: 19px;
+    margin: 14px 0 8px;
+}
+.envianos input, .envianos select, .envianos textarea {
+    width: 100%;
+    min-height: 42px;
+    padding: 8px 12px;
+    font: 16px Arial, Helvetica, sans-serif;
+    border: 1px solid #8aa6bf;
+    border-radius: 8px;
+    background: #fff;
+}
+.envianos textarea { min-height: 110px; resize: vertical; }
+.envianos input:focus, .envianos select:focus, .envianos textarea:focus {
+    outline: 3px solid rgba(22, 128, 232, 0.3); border-color: var(--azul2);
+}
+.enviar {
+    margin-top: 22px;
+    height: 46px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(58, 18, 202);
+    color: #fff;
+    font: 700 15px Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.15s;
+}
+.enviar:hover { background-color: rgb(45, 12, 170); }
+.enviar:active { transform: scale(0.98); }
+.direc { font-size: 20px; margin: 18px 0 6px; }
+.infos + .direc { margin-top: 8px; }
+.avenida { font-size: 20px; line-height: 1.45; }
+.hay { color: red; }
+
+/* =========================================================
+   LAPTOP (hasta 1599 px): las tarjetas de ayuda de Consulta
+   pasan debajo de los datos para que no se aprieten
+   ========================================================= */
+@media (max-width: 1599px) {
+    body[data-pagina="consulta"] .abajo {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-areas:
+            "centro centro   centro centro"
+            "ayuda  seguro   cuidemos equipo";
+    }
+    .datos, .resumen { padding: 20px 28px; }
+    .fofo { gap: 28px; }
+}
+
+@media (max-width: 1280px) {
+    .abajo { padding: 22px; }
+    body[data-pagina="inicio"] .abajo { column-gap: 22px; }
+    .estadistica { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 22px; }
+    .cobro { grid-column: 1 / -1; }
+    body[data-pagina="informacion"] section.informacion { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    body[data-pagina="informacion"] .abajo { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .formas { grid-column: 1 / -1; }
+    .fofo { gap: 22px; }
+    .fofo .iniciar { margin-left: 6px; }
+    .codigo, .socio, .codigo1, .socio1 { font-size: 17px; }
+}
+
+/* =========================================================
+   TABLET (hasta 1024 px) — menú hamburguesa
+   ========================================================= */
+.otb-hamburguesa { display: none; }
+
+@media (max-width: 1024px) {
+    .arriba {
+        padding: 10px 16px;
+        min-height: 0;
+    }
+    .otb-hamburguesa {
+        grid-column: 6;
+        grid-row: 1 / span 2;
+        justify-self: end;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 46px;
+        height: 46px;
+        padding: 0 11px;
+        border: none;
+        border-radius: 10px;
+        background: var(--tarjeta);
+        cursor: pointer;
+    }
+    .otb-hamburguesa span {
+        display: block;
+        height: 3px;
+        border-radius: 2px;
+        background: var(--titulo);
+        transition: transform 0.2s, opacity 0.2s;
+    }
+    .otb-menu-abierto .otb-hamburguesa span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .otb-menu-abierto .otb-hamburguesa span:nth-child(2) { opacity: 0; }
+    .otb-menu-abierto .otb-hamburguesa span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    .fofo {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin-top: 10px;
+        border-top: 1px solid #b9d2ee;
+    }
+    .arriba.otb-menu-abierto .fofo { display: flex; }
+    .fofo a {
+        padding: 13px 6px;
+        font-size: 16px;
+        border-bottom: 1px solid var(--blanco-borde);
+    }
+    .fofo a.otb-actual { border-bottom-color: var(--blanco-borde); background: rgba(197, 219, 245, 0.6); }
+    .fofo .iniciar { width: 100%; margin: 12px 0 4px; }
+
+    body[data-pagina="inicio"] .abajo { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .perfil, .perfil1, .perfil2 { max-width: none; }
+    .perfil2 { grid-column: 1 / -1; max-width: calc(50% - 11px); }
+    .estadistica { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    body[data-pagina="consulta"] .abajo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+            "centro centro"
+            "ayuda  seguro"
+            "cuidemos equipo";
+    }
+    .historial table { min-width: 560px; }
+
+    body[data-pagina="informacion"] .medio h1 { font-size: 42px; }
+    .lunes, .martes, .miercoles, .jueves, .sabado, .domingo { font-size: 18px; }
+    .pago, .deposito, .punto, .linea { font-size: 17px; }
+
+    body[data-pagina="contacto"] .medio { column-gap: 24px; }
+}
+
+/* =========================================================
+   CELULAR (hasta 700 px)
+   ========================================================= */
+@media (max-width: 700px) {
+    body { padding: 8px; }
+    .todo { gap: 8px; }
+    .arriba > .agua { width: 40px; height: 40px; }
+    .arriba .otb, .arriba .otb1, .arriba .otb2 { font-size: clamp(15px, 4.6vw, 20px); }
+    .arriba .sistema { font-size: 13px; }
+
+    .medio { min-height: 0; padding: 26px 14px; gap: 12px; }
+    .medio h1 { font-size: clamp(20px, 5.4vw, 25px); }
+    .medio .deuda { font-size: clamp(15px, 4vw, 20px); }
+    .celula { padding: 16px; }
+    .buscar { flex-wrap: wrap; }
+    .buscar .caja { flex: 1 1 100%; height: 46px; }
+    .buscar .pepe { flex: 1 1 100%; height: 46px; }
+
+    .abajo { padding: 14px 12px; }
+    body[data-pagina="inicio"] .abajo { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+    .perfil2 { max-width: none; }
+    body[data-pagina="inicio"] .medio,
+    body[data-pagina="consulta"] .medio {
+        background-image: linear-gradient(rgba(219, 235, 253, 0.5), rgba(219, 235, 253, 0.5)), url(../img/grifo.jpeg);
+    }
+    .estadistica { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+
+    .datos, .resumen { padding: 16px; column-gap: 14px; }
+    .usuario1, .resumen1 { font-size: 17px; }
+    .codigo, .socio, .codigo1, .socio1 { font-size: 15px; }
+
+    body[data-pagina="consulta"] .abajo {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "centro" "ayuda" "seguro" "cuidemos" "equipo";
+        gap: 14px;
+    }
+    .papa { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+    .ayuda { font-size: 18px; }
+
+    body[data-pagina="informacion"] .medio h1 { font-size: clamp(32px, 9vw, 42px); }
+    .villa { font-size: clamp(20px, 5.5vw, 30px); }
+    .aqui { font-size: 14px; }
+    body[data-pagina="informacion"] .abajo,
+    body[data-pagina="informacion"] section.informacion { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+    .tarifas, .horarios, .formas { padding: 16px; }
+    .lunes, .martes, .miercoles, .jueves, .sabado, .domingo { font-size: 16px; }
+    .pago, .deposito, .punto, .linea { font-size: 16px; }
+
+    body[data-pagina="contacto"] .medio {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 22px 12px;
+    }
+    .medio .contactos { font-size: 30px; }
+    .estamos, .cualquier { font-size: 16px; }
+    .cualquier { margin: -8px 0 8px; }
+    .envianos, body[data-pagina="contacto"] .info { padding: 18px 16px; }
+    .nombre, .correo, .envianos label, .mensaje1 { font-size: 17px; }
+    .mensaje, .infos { font-size: 20px; }
+    .direc, .avenida { font-size: 17px; }
+}
+
+@media (max-width: 400px) {
+    .arriba .sistema { font-size: 12px; }
+    .datos, .resumen { padding: 14px 12px; column-gap: 10px; }
+    .codigo, .socio, .codigo1, .socio1 { font-size: 14px; }
+}

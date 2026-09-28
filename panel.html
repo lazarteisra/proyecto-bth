@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel · OTB VILLA ESPERANZA</title>
+    <link rel="stylesheet" href="css/sistema.css">
+    <link rel="stylesheet" href="css/panel.css">
+</head>
+<body class="p-body">
+    <header class="p-cabecera">
+        <a class="p-marca" href="otb.html" title="Ir al sitio">
+            <img src="img/agua-removebg-preview.png" alt="">
+            <span>
+                <b>OTB VILLA ESPERANZA</b>
+                <small>Panel de gestión · Cobro de Agua</small>
+            </span>
+        </a>
+        <div class="p-usuario" id="p-usuario" hidden>
+            <span class="p-usuario-nombre" id="p-nombre"></span>
+            <span class="p-rol" id="p-rol"></span>
+            <a class="otb-btn otb-btn-sec otb-btn-chico" href="otb.html">Ver sitio</a>
+            <button type="button" class="otb-btn otb-btn-sec otb-btn-chico" id="p-salir">Salir</button>
+        </div>
+    </header>
+
+    <nav class="p-pestanas" id="p-pestanas" aria-label="Secciones del panel"></nav>
+
+    <main class="p-contenido" id="p-contenido"></main>
+
+    <script src="js/datos.js"></script>
+    <script src="js/comun.js"></script>
+    <script src="js/panel.js"></script>
+</body>
+</html>

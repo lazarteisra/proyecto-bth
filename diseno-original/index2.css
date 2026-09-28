@@ -1,0 +1,350 @@
+body{
+    background-color: rgb(3, 52, 80);
+    overflow: hidden;
+}
+.todo{
+    position: relative;
+    top: 14px;
+}
+.agua{
+    width: 55px;
+    height: 50px;   
+    position: relative;
+    top: 0px;
+}
+.otb{
+    font-size: 20px;
+    position: relative;
+    left: 45px;
+    bottom: 63px;
+    color: rgb(9, 71, 112);
+    font-family: arial black;
+}
+.otb1{
+    font-size: 20px;
+    position: relative;
+    left: 97px;
+    bottom: 107px;
+    color: rgb(9, 71, 112);
+    font-family: arial black;
+}
+.otb2{
+    font-size: 20px;
+    position: relative;
+    left: 170px;
+    bottom: 152px;
+    color: rgb(9, 71, 112);
+    font-family: arial black;
+}
+.sistema{
+    font-size: 15px;
+    position: relative;
+    bottom: 168px;
+    left: 50px;
+    font-family: monospace;
+}
+.iniciar {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #0756c9, #1680e8);
+    padding: 11px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 5px 12px rgba(7, 86, 201, 0.25);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.iniciar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(7, 86, 201, 0.35);
+    background: linear-gradient(135deg, #0649ad, #0e70d5);
+}
+.iniciar:active {
+    transform: scale(0.96);
+}
+a{
+    text-decoration: none;
+}
+.inicio{
+    position: relative;
+    left: 1070px;
+    bottom: 245px;
+    font-size: 15px;
+    border: none;  
+    font-family: monospace;
+}
+.consulta{
+    position: relative;
+    left: 1120px;
+    bottom: 245px;
+    font-size: 15px;
+    border: none;
+    font-family: monospace;
+}
+.informacion{
+    position: relative;
+    left: 1170px;
+    bottom: 245px;
+    font-size: 15px;
+    border: none;
+    font-family: monospace;
+}
+.contacto{
+    position: relative;
+    left: 1200px;
+    bottom: 245px;
+    font-size: 15px;
+    border: none;
+    font-family: monospace;
+}
+.iniciar{
+    position: relative;
+    left: 1330px;
+    bottom: 220px;
+    font-size: 15px;
+    border: none;
+    background-color: rgb(14, 56, 222);
+    width: 130px;
+    height: 45px;
+    color: white;
+    border-radius: 7px;
+}
+.sesion{
+    position: relative;
+    bottom: 19px;
+}
+.arriba{
+    width: 100%;
+    height: 80px;
+    background-color: #dbebfd;
+    border-radius: 10px;
+    max-width: 100%;    
+    margin: auto;
+    overflow: hidden;
+
+}
+.medio{
+    background-image: url(grifo.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border-radius: 10px;
+}
+h1{
+    font-size: 50px;
+    font-family: arial black;
+    text-align: center;
+    position: relative;
+    left: 500px;
+    bottom: 100px;
+    color: rgb(252, 252, 252);
+}
+.villa{
+    font-size: 30px;
+    font-family: arial black;
+    text-align: center;
+    position: relative;
+    left: 140px;
+    bottom: 50px;
+    color: rgb(64, 54, 209);
+}
+.aqui{
+    font-size: 18px;
+    position: relative;
+    top: 30px;
+    right: 300px;
+    font-family: arial black;
+    color: rgb(66, 38, 194);
+}
+.info{
+    background-color: #c5dbf5;
+    border: 1px solid #d5e3ef;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    max-width: 520px;
+    position: relative;
+    top: 280px;
+    right: 1100px;
+    width: 350px;
+    height: 110px;
+}
+.agua {
+    width: 55px;
+    height: 55px;
+    position: static;
+}
+.dudas {
+    color: #080808;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.gaga{
+    background-color: #c5dbf5;
+    border: 1px solid #d5e3ef;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    max-width: 520px;
+    position: relative;
+    top: 130px;
+    right: 660px;
+    width: 350px;
+    height: 110px;
+}
+.tata{
+    background-color: #c5dbf5;
+    border: 1px solid #d5e3ef;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    max-width: 520px;
+    position: relative;
+    bottom: 20px;
+    right: 200px;
+    width: 350px;
+    height: 110px;
+}
+.ayudarte{
+    background-color: #c5dbf5;
+    border: 1px solid #d5e3ef;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    max-width: 520px;
+    position: relative;
+    bottom: 170px;
+    left: 250px;
+    width: 350px;
+    height: 110px;
+}
+.tarifas {
+    background: white;
+    border: 1px solid #c9dceb;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 550px;
+    height: 250px;
+    position: relative;
+    right: 1000px;
+    bottom: 120px;
+}
+
+.vigente {
+    color: #0864c7;
+    font-size: 20px;
+    margin: 0 0 8px 0;
+}
+.tarifas table {
+    width: 500px;
+    height: 200px;
+    border-collapse: collapse;
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+    left: 20px;
+}
+
+.tarifas th {
+    background: #e5f0fc;
+    color: #064ca0;
+    padding: 6px 4px;
+}
+
+.tarifas td {
+    padding: 5px 4px;
+    border-bottom: 1px solid #ddd;
+}
+.horarios {
+    background: white;
+    border: 1px solid #c9dceb;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 500px;
+    height: 250px;
+    position: relative;
+    right: 400px;
+    bottom: 370px;
+}
+.horario{
+    color: #0864c7;
+    font-size: 20px;
+    margin: 0 0 8px 0;    
+}
+.jueves{
+    color: red  ;
+}
+.lunes,.martes,.miercoles,.jueves,.sabado,.domingo{
+    font-size: 22px;
+}   
+.lunes{
+    position: relative;
+    bottom: 0px;
+}
+.domingo{
+    position: relative;
+    bottom: 10px;
+}
+.martes{
+    position: relative;
+    left: 300px;
+    bottom: 205px;
+}
+.miercoles{
+    position: relative;
+    left: 300px;
+    bottom: 195px;
+}
+.jueves{
+    position: relative;
+    left: 280px;
+    bottom: 180px;
+}
+.formas {
+    background: white;
+    border: 1px solid #c9dceb;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 500px;
+    height: 250px;
+    position: relative;
+    right: -150px;
+    bottom: 620px;
+}
+.forma{
+    color: #0864c7;
+    font-size: 20px;
+    margin: 0 0 8px 0;    
+}
+.pago,.deposito,.punto,.linea{
+    font-size: 20px;
+}
+.abajo{
+    background-color: #dbebfd;
+    height: 515px;
+    padding: 0px;
+    position: relative;
+    bottom: 20px;
+    border-radius: 5px;
+}

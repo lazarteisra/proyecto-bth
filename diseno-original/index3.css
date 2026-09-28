@@ -1,0 +1,243 @@
+body{
+    background-color: rgb(3, 52, 80);
+    overflow: hidden;
+}
+
+.agua{
+    width: 55px;
+    height: 50px;   
+    position: relative;
+    bottom: -10px;
+}
+.otb{
+    font-size: 20px;
+    position: relative;
+    left: 45px;
+    bottom: 63px;
+    color: rgb(9, 71, 112);
+    font-family: arial black;
+}
+.otb1{
+    font-size: 20px;
+    position: relative;
+    left: 97px;
+    bottom: 107px;
+    color: rgb(9, 71, 112);
+    font-family: arial black;
+}
+.otb2{
+    font-size: 20px;
+    position: relative;
+    left: 170px;
+    bottom: 152px;
+    color: rgb(9, 71, 112);
+    font-family: arial black;
+}
+.sistema{
+    font-size: 15px;
+    position: relative;
+    bottom: 168px;
+    left: 50px;
+    font-family: monospace;
+}
+.iniciar {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #0756c9, #1680e8);
+    padding: 11px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 5px 12px rgba(7, 86, 201, 0.25);
+    transition: all 0.3s ease;
+}
+.iniciar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(7, 86, 201, 0.35);
+    background: linear-gradient(135deg, #0649ad, #0e70d5);
+}
+.iniciar:active {
+    transform: scale(0.96);
+}
+.inicio{
+    position: relative;
+    left: 1070px;
+    bottom: 250px;
+    font-size: 15px;
+    border: none;   
+    font-family: monospace;
+    text-decoration: none;
+}
+.consulta{
+    position: relative;
+    left: 1120px;
+    bottom: 250px;
+    font-size: 15px;
+    border: none;
+    font-family: monospace;
+    text-decoration: none;
+}
+.informacion{
+    position: relative;
+    left: 1170px;
+    bottom: 250px;
+    font-size: 15px;
+    border: none;
+    font-family: monospace;
+    text-decoration: none;
+}
+.contacto{
+    position: relative;
+    left: 1200px;
+    bottom: 250px;
+    font-size: 15px;
+    border: none;
+    font-family: monospace;
+    text-decoration: none;          
+}
+.iniciar{
+    position: relative;
+    left: 1330px;
+    bottom: 225px;
+    font-size: 15px;
+    border: none;
+    background-color: rgb(14, 56, 222);
+    width: 130px;
+    height: 45px;
+    color: white;
+    border-radius: 7px;
+    text-align: center;
+}
+.sesion{
+    position: relative;
+    bottom: 19px;
+}
+.arriba{
+    width: 100%;
+    height: 80px;
+    background-color: #dbebfd;
+    border-radius: 10px;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    margin-block-start: 20px;
+}
+.contactos{
+    font-size: 40px;
+    font-family: arial black;
+    position: relative;
+    left: 810px;
+}
+.estamos{
+    font-size: 20px;
+    position: relative;
+    left: 700px;
+    bottom: 10px;
+}
+.cualquier{
+        font-size: 20px;
+        position: relative;
+        left: 740px;
+        bottom: 20px;
+}
+.envianos {
+    background: white;
+    border: 1px solid #c9dceb;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 550px;
+    height: 550px;
+    position: relative;
+    left: 240px;
+    bottom: 0px;
+}
+
+.mensaje {
+    color: #0864c7;
+    font-size: 22px;
+    margin: 0 0 8px 0;
+}
+.nombre,.correo,label,.mensaje1{
+    font-size: 20px;
+}
+input{
+    height: 30px;
+    width: 500px;
+}
+label{
+    position: relative;
+    top: 15px;
+}
+#asunto{
+    width: 507px;
+    height: 40px;
+    position: relative;
+    top: 25px;
+}
+.mensaje1{
+    position: relative;
+    top: 20px;
+}
+.tu{
+    height: 100px;
+    position: relative;
+    top: 20px;
+    text-align: start;
+    justify-items: start
+}
+.enviar {
+    position: relative;
+    bottom: -30px;
+    border-radius: 5px;
+    border: black ;
+    left: 0px;
+    width: 507px;
+    height: 40px;
+    background-color: rgb(58, 18, 202);
+    color: white;
+}
+.info {
+    background: white;
+    border: 1px solid #c9dceb;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 550px;
+    height: 550px;
+    position: relative;
+    left: 1000px;
+    bottom: 550px;
+}
+.infos {
+    color: #0864c7;
+    font-size: 23px;
+    margin: 0 0 8px 0;
+    position: relative;
+    left: 30px;
+}
+.direc{
+    font-size: 21px;
+    position: relative;
+    left: 40px;
+}
+.avenida{
+    font-size: 21px;
+    position: relative;
+    left: 40px;
+}
+.hay{
+    font-size: 21px;
+    color: red;
+    position: relative;
+    left: 230px;
+    bottom: 45px;
+}
+.medio{
+    background-color: #dbebfd;
+    height: 800px;
+    padding: 0px;
+    position: relative;
+    bottom: 20px;
+    border-radius: 5px;
+}

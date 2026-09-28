@@ -1,0 +1,415 @@
+body{
+    background-color: rgb(3, 52, 80);
+    overflow: hidden;
+}
+.todo{
+
+    position: relative;
+    top: 14px;
+}
+.agua{
+    width: 55px;
+    height: 50px;   
+    position: relative;
+    top: 10px;
+}
+.otb{
+    font-size: 20px;
+    position: relative;
+    left: 45px;
+    bottom: 63px;
+    color: rgb(9, 71, 112);
+    font-family: arial black;
+}
+.otb1{
+    font-size: 20px;
+    position: relative;
+    left: 97px;
+    bottom: 107px;
+    color: rgb(9, 71, 112);
+    font-family: arial black;
+}
+.otb2{
+    font-size: 20px;
+    position: relative;
+    left: 170px;
+    bottom: 152px;
+    color: rgb(9, 71, 112);
+    font-family: arial black;
+}
+.sistema{
+    font-size: 15px;
+    position: relative;
+    bottom: 168px;
+    left: 50px;
+    font-family: monospace;
+}
+.iniciar {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #0756c9, #1680e8);
+    padding: 11px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 5px 12px rgba(7, 86, 201, 0.25);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.iniciar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(7, 86, 201, 0.35);
+    background: linear-gradient(135deg, #0649ad, #0e70d5);
+}
+.iniciar:active {
+    transform: scale(0.96);
+}
+a{
+    text-decoration: none;
+}
+.inicio{
+    position: relative;
+    left: 1070px;
+    bottom: 245px;
+    font-size: 15px;
+    border: none;  
+    font-family: monospace;
+}
+.consulta{
+    position: relative;
+    left: 1120px;
+    bottom: 245px;
+    font-size: 15px;
+    border: none;
+    font-family: monospace;
+}
+.informacion{
+    position: relative;
+    left: 1170px;
+    bottom: 245px;
+    font-size: 15px;
+    border: none;
+    font-family: monospace;
+}
+.contacto{
+    position: relative;
+    left: 1200px;
+    bottom: 245px;
+    font-size: 15px;
+    border: none;
+    font-family: monospace;
+}
+.iniciar{
+    position: relative;
+    left: 1330px;
+    bottom: 220px;
+    font-size: 15px;
+    border: none;
+    background-color: rgb(14, 56, 222);
+    width: 130px;
+    height: 45px;
+    color: white;
+    border-radius: 7px;
+}
+.sesion{
+    position: relative;
+    bottom: 17px;
+}
+.arriba{
+    width: 100%;
+    height: 80px;
+    background-color: #dbebfd;
+    border-radius: 10px;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+
+}
+.medio{
+    background-image: url(grifo.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border-radius: 10px;
+}
+h1{
+    font-size: 25px;
+    font-family: arial black;
+    text-align: center;
+    position: relative;
+    left: 580px;
+    bottom: 100px;
+    color: rgb(36, 72, 190);
+}
+.deuda{
+    font-size: 20px;
+    position: relative;
+    left: 180px;
+    bottom: 50px;
+    color: rgb(19, 76, 151);
+    font-family: initial;
+}
+.celula{
+    background-color: #c5dbf5;
+    width: 600px;
+    height: 130px;
+    position: relative;
+    top: 50px;
+    border-radius: 20px;
+    right: 370px;
+}
+span{
+    font-size: 15px;
+    position: relative;
+    left: 22px;
+    top: 20px;
+    font-family: "Merienda", cursive;
+    color: black;
+}
+input{
+    position: relative;
+    top: 25px;
+    left: 20px;
+    width: 400px;
+    height: 20px;
+
+
+}
+.caja{
+    position: relative;
+    top: 10px;
+}
+.pepe{
+    border: none;
+    width: 130px;
+    height: 30px;
+    position: relative;
+    left: 40px;
+    bottom: -30px; 
+    color: white;
+    background: linear-gradient(135deg, #0756c9, #1680e8);
+    padding: 11px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 5px 12px rgba(7, 86, 201, 0.25);
+    transition: all 0.3s ease;
+}
+.consul{
+    position: relative;
+    bottom: 17px;
+}
+.pepe:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(7, 86, 201, 0.35);
+    background: linear-gradient(135deg, #0649ad, #0e70d5);
+}
+.pepe:active {
+    transform: scale(0.96);
+}
+.cedula1{
+    font-size: 15px;
+    position: relative;
+    top: 8px;
+    left: 20px;
+    font-family: "Merienda", cursive;    
+    color: rgb(83, 83, 81);
+}
+.what{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    top: 10px;
+}
+.what1{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    top: 15px;
+}
+.what2{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    top: 15px;
+    left: 10px;
+}
+h3{
+    font-size: 20px;
+    font-family: arial black;
+    text-align: center;
+    color: rgb(9, 71, 112);
+    position: relative;
+    top: 10px;
+}
+.perfil{
+    width: 300px;
+    height: 100px;
+    background-color: #cae0fa;
+    border-radius: 10px;
+    border: 1px solid black;
+    position: relative;
+    left: 260px;
+}
+.perfil1{
+    width: 300px;
+    height: 100px;
+    background-color: #c5dbf5;
+    border-radius: 10px;
+    border: 1px solid black;
+    position: relative;
+    left: 780px;
+    bottom: 100px;
+}
+.perfil2{
+    width: 300px;
+    height: 100px;
+    background-color: #c5dbf5;
+    border-radius: 10px;
+    border: 1px solid black;
+    position: relative;
+    left: 1310px;
+    bottom: 200px;
+}
+.gato{
+    font-size: 18px;
+    position: relative;
+    left: 80px;
+    bottom: 80px;
+    color: rgb(9, 71, 112);
+    font-family: arial black;
+}
+.revisar{
+    font-size: 13px;
+    position: relative;
+    left: 80px;
+    top: -95px;
+}
+.gato1{
+    font-size: 18px;
+    position: relative;
+    left: 80px;
+    top: -80px;
+    color: rgb(9, 71, 112);
+    font-family: arial black;
+}
+.revisar1{
+    font-size: 13px;
+    position: relative;
+    left: 80px;
+    top: -95px;
+}
+.gato2{
+    font-size: 18px;
+    position: relative;
+    left: 95px;
+    top: -80px;
+    color: rgb(9, 71, 112);
+    font-family: arial black;
+}
+.revisar2{
+    font-size: 13px;
+    position: relative;
+    left: 95px;
+    top: -95px;
+}
+h5{
+    font-size: 20px;
+    position: absolute;
+    bottom: 280px;
+    left: 70px;
+    font-family: "Merienda", cursive; 
+    color: rgb(9, 71, 112);
+}
+.datos{
+    border: 1px solid;
+    border-radius: 10px;
+    width: 500px;
+    height: 270px;
+    position: relative;
+    bottom: 150px;
+    left: 70px;
+    background-color: white;
+}
+.usuario1{
+    font-size: 18px;
+    position: relative;
+    left: 50px;
+    bottom: 25px;
+    color: rgb(9, 71, 112);
+    font-family: arial black;
+}
+.codigo{
+    font-size: 18px;
+    position: relative;
+    left: 50px;
+    bottom: 50px;
+}
+.socio{
+    font-size: 18px;
+    position: relative;
+    left: 290px;
+    bottom: 255px;
+}
+.resumen{
+    border: 1px solid;
+    border-radius: 10px;
+    width: 500px;
+    height: 270px;
+    position: relative;
+    bottom: 420px;
+    left: 670px;
+    background-color: white;
+}
+.resumen1{
+    font-size: 18px;
+    position: relative;
+    left: 50px;
+    bottom: 25px;
+    color: rgb(9, 71, 112);
+    font-family: arial black;
+}
+.codigo1{
+    font-size: 18px;
+    position: relative;
+    left: 50px;
+    bottom: 55px;
+}
+.socio1{
+    font-size: 18px;
+    position: relative;
+    left: 300px;
+    bottom: 220px;
+}
+.pagar {
+    position: relative;
+    bottom: 220px;
+    border-radius: 10px;
+    border: black ;
+    left: 40px;
+    width: 400px;
+    height: 40px;
+    background-color: rgb(51, 153, 51);
+    color: white;
+}
+.cobro1{
+    width: 500px;
+    height: 290px;
+    position: relative;
+    left: 1300px;
+    bottom: 700px;
+    border-radius: 10px;
+}
+.abajo{
+    background-color: #dbebfd;
+    height: 500px;
+    padding: 0px;
+    position: relative;
+    bottom: 20px;
+    border-radius: 5px;
+}
