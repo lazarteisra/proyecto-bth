@@ -30,6 +30,7 @@
 }
 .p-marca small { font-family: monospace; font-size: 13px; color: #222; }
 .p-usuario { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.p-usuario[hidden] { display: none; }
 .p-usuario-nombre { font-weight: 700; color: var(--otb-titulo); }
 .p-rol {
     font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px;
